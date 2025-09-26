@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Dimas Website</title>
+  <!-- Pastikan sudah memanggil font awesome di <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+  body {
+    font-family: normal;
+  }
+    pre {
+      background: #e7f6ff;
+      color: black;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+    .copy-btn {
+      margin-top: 5px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .copy-btn.copied {
+      background: #28a745;
+    }
+    .code-block {
+      margin-bottom: 20px;
+    }
+    
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;   /* biar radius kepakai */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .video-wrapper::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* rasio 16:9 (9/16*100) */
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .btn:hover {
+    background: #1e7e34;
+  }
+
+.verified-name {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 0px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.verified-name i {
+  color: #1da1f2; /* biru khas centang verifikasi */
+  font-size: 16px;
+}
+
+  
+  </style>
+</head>
+<body>
+<img src="https://i.postimg.cc/mkXc1Trj/20250926-170845.jpg" alt="Contoh Gambar" style="border:none;">
+            
+<div class="verified-name">
+  <span class="name">Dimas Muballigh</span>
+  <i class="fas fa-check-circle"></i>
+  
+</div>
+<a style="font-size: 11px; color:#444;  font-family: 'Courier New', monospace;
+">
+Design • Dimas V0.1.0
+</a>
+<p style="color:#0ad910; background:#333; display:flex;  border-radius: 3px; padding: 0px 5px; font-family: 'Courier New', monospace;
+">
+website untuk belajar Code 
+</p>
+
+  <h2>Materi Belajar langkah 1</h2>
+  <b style="font-size: 17px;">Belajar mengenal html css dan javascript dan cara menggabungkannya 
+   </b>
+    <br> </br>
+     <b style="font-size: 14px;">
+   Contoh paling mudah dibaca buat urutan seperti ini <br> html + css + javascript
+  </b>
+
+  <div class="code-block">
+    <pre style="background: #fff;"><code>1. Html
+    
+&lt;html&gt; 
+isi elemen disini kemudian tutup dengan 
+&lt;/html&gt;
+
+2. Css
+
+&lt;style&gt; 
+isi elemen disini kemudian tutup dengan 
+&lt;/style&gt;
+
+3. Javascript
+
+&lt;script&gt;
+isi elemen disini kemudian tutup dengan 
+&lt;/script&gt;
+    </code></pre>
+
+
+  <b style="font-size: 18px;">Contoh cara penulisan</b><br>
+  <b style="font-size: 14px;">Tampilan penulisan kode html</b>
+      <p style="font-size: 14px;">﹤html﹥ isi elemen lalu tutup dengan﹤/html﹥</p>
+    
+    <b style="font-size: 14px;">Contoh 👇</b>    <br>
+        <b style="font-size: 12px;">html</b>
+  <div class="code-block">
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;
+  &lt;title&gt;Contoh Profil&lt;/title&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container"&gt;
+
+    &lt;!-- Foto Profil --&gt;
+    &lt;div class="avatar"&gt;
+      &lt;img src="https://via.placeholder.com/300x300.png?text=Avatar" alt="Foto Profil"&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Informasi Profil --&gt;
+    &lt;div class="info"&gt;
+      &lt;h2&gt;Isi Nama Lengkap&lt;/h2&gt;
+      &lt;p&gt;&lt;strong&gt;Tanggal Lahir:&lt;/strong&gt; 1 Januari 1990&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Alamat:&lt;/strong&gt; Jalan Merdeka No. 123, Kota Contoh&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Tombol Aksi --&gt;
+    &lt;div class="actions"&gt;
+      &lt;button class="btn-primary" onclick="window.location.href='profil-lengkap.html'"&gt;Buka Halaman Profil&lt;/button&gt;
+      &lt;button class="btn-secondary" onclick="alert('Fungsi edit belum diimplementasikan')"&gt;Edit&lt;/button&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+    </code></pre>
+    <button class="copy-btn">Salin</button>
+  </div>
+
+  <b style="font-size: 18px;">Tampilan penulisan kode Css</b>
+    <p style="font-size: 14px;">﹤style﹥ isi elemen lalu tutup dengan﹤/style﹥</p>
+    
+    <b style="font-size: 14px;">Contoh 👇</b> <br>
+        <b style="font-size: 12px;">css</b>
+  <div class="code-block">
+    <pre><code>
+  &lt;style&gt;
+  
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f7f8;
+      margin: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .avatar {
+      display: block;
+      margin: 0 auto 15px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .info {
+      text-align: left;
+    }
+    .info h2 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+    .info p {
+      margin: 6px 0;
+      color: #555;
+      font-size: 14px;
+    }
+    .actions {
+      text-align: left;
+      margin-top: 20px;
+    }
+    .actions button {
+      margin: 5px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .btn-primary {
+      background: #0b84ff;
+      color: #fff;
+    }
+    .btn-secondary {
+      background: #eee;
+      color: #333;
+    }
+    
+  &lt;/style&gt;
+
+    </code></pre>
+    <button class="copy-btn">Salin</button>
+  </div>
+
+  <b style="font-size: 18px;">Tampilan penulisan kode Javascript</b>
+    <p style="font-size: 14px;">﹤script﹥ isi elemen lalu tutup dengan﹤/script﹥</p>
+    
+    <b style="font-size: 14px;">Contoh 👇</b>
+    <br>
+    <b style="font-size: 12px;">javascript</b>
+  <div class="code-block">
+    <pre><code>
+&lt;script&gt;
+
+  function editProfil() {
+    alert('Fungsi edit belum diimplementasikan');
+  }
+
+  function bukaProfil() {
+    window.location.href = 'profil-lengkap.html';
+  }
+  
+&lt;/script&gt;
+
+    </code></pre>
+    <button class="copy-btn">Salin</button>
+  </div>
+  <b style="font-size: 15px;">Jika sudah faham dengan cara di atas kita lanjut langkah 2 menggunakan kode salinan di atas </b>
+  <br>
+</br>
+<hr>
+
+  <h2>Materi Belajar langkah 2</h2>
+    <b style="font-size: 18px;">Mengatur Tata letak</b>
+         <p style="font-size: 16px;">Pastikan tata letak (Css/style) dan (javascript/script ) di bungkus dalam html</p>
+             <b style="font-size: 17px;">Begini Urutannya</b>
+  <div class="code-block">
+<pre>
+╭&lt;!DOCTYPE html&gt;
+╭&lt;html lang="id"&gt;
+│ ╭&lt;head&gt;
+│ │ &lt;meta charset="utf-8" /&gt;
+│ │ &lt;meta name="viewport" content="" /&gt;
+│ │ &lt;title&gt;Judul Halaman&lt;/title&gt;
+│ │ ╭&lt;style&gt;
+│ │ │ /* CSS ditulis di sini */
+│ │ ╰&lt;/style&gt;
+│ ╰&lt;/head&gt;
+│ ╭&lt;body&gt;
+│ │ &lt;!-Konten ditulis di sini -&gt;
+│ │ ╭&lt;script&gt;
+│ │ │ // JavaScript ditulis di sini
+│ │ ╰&lt;/script&gt;
+│ ╰&lt;/body&gt;
+╰&lt;/html&gt;
+</pre>
+
+    <b style="font-size: 17px;">Perhatikan Contoh</b>
+  <div class="code-block">
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+
+    <h3 style="font-size: 12px; font-weight: bold;">Perhatikan letak css  <a style="font-weight: bold; color: red">﹤style﹥isi﹤/style﹥</a> di dalam  <a style="font-weight: bold; color: blue">﹤head﹥</a>  <br>👇 di bagian atas sebelum 👉 <a style="font-weight: bold; color: blue">﹤/head﹥</a></h3> 
+
+╭➔ <a style="font-weight: bold; color: blue">﹤head﹥</a> 
+│  &lt;meta charset="utf-8" /&gt;
+│  &lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;
+│  &lt;title&gt;Contoh Profil&lt;/title&gt;
+
+    <h3 style="font-size: 12px; font-weight: bold; ">letak 👇 css style disini di atas﹤/head﹥</h3>
+  <a style="font-weight: bold; color: red">﹤style﹥
+    isi
+  ﹤/style﹥</a> 
+│ 
+╰➔ <a style="font-weight: bold; color: blue">﹤/head﹥</a> 
+
+&lt;body&gt;
+  &lt;div class="container"&gt;
+
+    &lt;!-- Foto Profil --&gt;
+    &lt;div class="avatar"&gt;
+      &lt;img src="https://via.placeholder.com/300x300.png?text=Avatar" alt="Foto Profil"&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Informasi Profil --&gt;
+    &lt;div class="info"&gt;
+      &lt;h2&gt;Isi Nama Lengkap&lt;/h2&gt;
+      &lt;p&gt;&lt;strong&gt;Tanggal Lahir:&lt;/strong&gt; 1 Januari 1990&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Alamat:&lt;/strong&gt; Jalan Merdeka No. 123, Kota Contoh&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Tombol Aksi --&gt;
+    &lt;div class="actions"&gt;
+      &lt;button class="btn-primary" onclick="window.location.href='profil-lengkap.html'"&gt;Buka Halaman Profil&lt;/button&gt;
+      &lt;button class="btn-secondary" onclick="alert('Fungsi edit belum diimplementasikan')"&gt;Edit&lt;/button&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  
+ <h3 style="font-size: 12px; font-weight: bold; ">Di sini 👆 paling ahir ﹤div﹥ masih di dalam html letak javascript ﹤script﹥isi lalu tutup﹤/script﹥</h3>
+<a style="font-size: 15px; font-weight: bold;">Contoh 👇</a> 
+<a style="font-weight: bold; color: blue">﹤script﹥</a> 
+
+  function editProfil() {
+    alert('Fungsi edit belum diimplementasikan');
+  }
+
+  function bukaProfil() {
+    window.location.href = 'profil-lengkap.html';
+  }
+  
+<a style="font-weight: bold; color: blue">﹤/script﹥</a> 
+  
+  
+&lt;/body&gt;
+&lt;/html&gt;
+ <h3 style="font-size: 12px; font-weight: bold; ">👆 Ahir tutup dengan 👉﹤/body﹥﹤/html﹥ </h3>
+    </code></pre>
+  </div>
+    
+ <h3 style="font-size: 14px; font-weight: bold; ">Cek gambar cara memulai sebelum paste kode</h3>
+    <p style="font-size: 16px;"> Buka apk ( a code) klik titik ⠸ di pojok kanan atas lalu klik Ganti nama atau Berkas baru, ubah tulisan (untitled⠠txt) atau langsung Masukan nama berkas tulis (index⠠html) lalu klik OKE. </p>
+    <p style="font-size: 16px;">Selanjutnya salin kode di atas langkah pertama tadi di bagian <b>(Materi Belajar langkah 1)</b></b> salin elemen html css javascript tempel ke a code </p>
+  <img src="https://i.postimg.cc/TPg6wFXF/20250925-201241.jpg" alt="Contoh Gambar">
+
+     <p style="font-size: 16px;">Setelah selesai menyalin semua kode html css dan js di <b>Materi Belajar langkah 1</b> dan selesai mempaste ke acode tinggal Run klik tanda (‣) dan hasil muncul seperti ini 👇 berarti anda berhasil</p>
+     <img src="https://i.postimg.cc/SN04CmgR/20250925-193128.jpg" alt="Contoh Gambar">
+<hr>
+  <h2>Materi Belajar langkah 3</h2>
+    <b style="font-size: 18px;">Cara Edit Tampilan  </b>
+     <p style="font-size: 16px;">Cara Edit elemen ubah isi teks poto profil menambah tombol dan fungsi agar dapat di klik membuka halaman tertentu. Cari bagian informasi profil contoh 👇 cek gambar </p>
+          <img src="https://i.postimg.cc/W4bP5mYz/20250925-234237.jpg" alt="Contoh Gambar">
+     <p style="font-size: 16px;">Pada gambar tersebut ada elemen bagian ini </p>
+         <pre><code>
+&lt;!-- Informasi Profil --&gt;
+  
+ &lt;div class="info"&gt;
+ 
+ &lt;h2&gt;Isi Nama Lengkap&lt;/h2&gt;
+ 
+ &lt;p&gt;&lt;strong&gt;
+ Tanggal Lahir:&lt;/strong&gt; 1 Januari 1990
+ &lt;/p&gt;
+ 
+ &lt;p&gt;&lt;strong&gt;
+ Alamat:&lt;/strong&gt; Jalan Merdeka No. 123
+ &lt;/p&gt;
+ 
+&lt;/div&gt;
+         </pre></code>
+     <p style="font-size: 16px;">Jika ingin edit ubah saja isi teks contoh  </p>
+         <pre><code>
+&lt;!-- Informasi Profil --&gt;
+  
+ &lt;div class="info"&gt;
+ 
+ &lt;h2&gt;Dimas Muballigh&lt;/h2&gt;
+ 
+ &lt;p&gt;&lt;strong&gt;
+ Tanggal Lahir:&lt;/strong&gt; 29/08/2011
+ &lt;/p&gt;
+  <p style=" color: blue;">Jika ingin menambah elemen baris salin saja bagian ini <p style="; color: red;"> &lt;p&gt;&lt;strong&gt;
+ :&lt;/strong&gt; 
+ &lt;/p&gt;</p> <p style=" color: blue;">paste di barisan yang ingin di tambahkan dan langsung isi contoh </p> <p style="; color: red;"> &lt;p&gt;&lt;strong&gt;
+ Status:&lt;/strong&gt; Pelajar
+ &lt;/p&gt;</p>
+ &lt;p&gt;&lt;strong&gt;
+ Alamat:&lt;/strong&gt; Jalan Sambas
+ &lt;/p&gt;
+ 
+&lt;/div&gt;
+         </pre></code>
+ <p style="font-size: 16px;"> Hasilnya Ini </p>
+         <pre><code>
+&lt;!-- Informasi Profil --&gt;
+  
+ &lt;div class="info"&gt;
+ 
+ &lt;h2&gt;Dimas Muballigh&lt;/h2&gt;
+
+ &lt;p&gt;&lt;strong&gt;
+ Tanggal Lahir:&lt;/strong&gt; 29/08/2011
+ &lt;/p&gt;
+ 
+ &lt;p&gt;&lt;strong&gt;
+ Status:&lt;/strong&gt; Pelajar
+ &lt;/p&gt;
+ 
+ &lt;p&gt;&lt;strong&gt;
+ Alamat:&lt;/strong&gt; Jalan Sambas
+ &lt;/p&gt;
+ 
+&lt;/div&gt;
+         </pre></code>
+     <p style="font-size: 16px;">Selanjutnya cari bagian poto profil ubah link nya pergi ke browser cari we hosting gambar mulai upload poto yang ingin di host salin bagian potongan link gambar nya contoh jika host gambar di web ibb.co   </p>
+         
+          <img src="https://i.postimg.cc/xjJqGmZn/20250926-014052.jpg" alt="Contoh Gambar">
+     
+     <p style="font-size: 16px;">Cari elemen bagian gambar poto profil ubah link gambar dengan link yang di salin tadi jika berhasil tampilan akan seperti ini 👇 </p>
+         
+          <img src="https://i.postimg.cc/qvx7MVm5/20250926-015153.jpg" alt="Contoh Gambar">
+          <p style="font-size: 18px; font-weight: bold;">Cek Juga di bagian vidio ini 👇 </p>
+<div class="video-wrapper">
+  <iframe 
+    src="https://www.youtube.com/embed/dqmwx4ZIfkk" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+    <p style="font-size: 18px; font-weight: bold;">Kunjungi juga Halaman Website kami Disini</p>
+  <button onclick="window.location.href='https://dimasmuballigh-design.github.io/dimas-website/'" class="btn">
+  Pergi ke Halaman
+</button>
+       <p style="font-size: 12px; color: #466feb;">Desingn • Dimas Website V0.1.0 © 2025</p>
+<hr>
+  <script>
+    document.querySelectorAll('.copy-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const code = btn.previousElementSibling.innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          btn.textContent = "✔ Disalin";
+          btn.classList.add("copied");
+          setTimeout(() => {
+            btn.textContent = "Salin";
+            btn.classList.remove("copied");
+          }, 2000);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
